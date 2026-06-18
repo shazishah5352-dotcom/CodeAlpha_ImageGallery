@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheraz ArtSpace | CodeAlpha Gallery</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-wrapper">
+        
+        <!-- Header with Search -->
+        <header class="gallery-header">
+            <div class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">SHERAZ'S ARTSPACE</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-link active">HOME</a>
+                <a href="#" class="nav-link">COLLECTIONS</a>
+                <a href="#" class="nav-link">ARTISTS</a>
+                <a href="#" class="nav-link">VISIT</a>
+            </nav>
+            <div class="header-search">
+                <i class="fas fa-search" id="searchIcon"></i>
+            </div>
+        </header>
+
+        <!-- Search Modal / Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <div class="search-header">
+                    <input type="text" id="searchInput" placeholder="Search by title or description..." autocomplete="off">
+                    <button class="search-close" id="searchClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults">
+                    <div class="search-results-header">
+                        <span id="resultCount"></span>
+                    </div>
+                    <div class="search-results-grid" id="searchResultsGrid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Where Art<br>Meets Vision</h1>
+                <p>Curated collections from around the world</p>
+                <div class="hero-line"></div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span class="label-text">CURATED CATEGORIES</span>
+                <span class="label-line"></span>
+            </div>
+            <h2 class="section-title">Explore by Collection</h2>
+            
+            <div class="categories-grid" id="categoriesGrid"></div>
+        </section>
+
+        <!-- Featured Works Section -->
+        <section class="featured-section">
+            <div class="section-label">
+                <span class="label-line"></span>
+                <span class="label-text">FEATURED WORKS</span>
+                <span class="label-line"></span>
+            </div>
+            <h2 class="section-title">Current Exhibition</h2>
+            
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="gallery-footer">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>ARTSPACE</h4>
+                    <p>Contemporary Art Gallery<br>Est. 2024</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Hours</h4>
+                    <p>Tue - Sat: 11am - 7pm<br>Sun - Mon: Closed</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>info@artspace.com<br>+1 (212) 555-0123</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 ARTSPACE. All rights reserved.</span>
+                <span>CodeAlpha Internship Project</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="closeBtn">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightboxImg" alt="">
+            <div class="lightbox-info">
+                <h3 id="captionTitle"></h3>
+                <p id="captionDesc"></p>
+                <span id="imageCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
